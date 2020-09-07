@@ -1,0 +1,43 @@
+500 (Internal Server Error)
+404 (Not Found)
+401 (Unauthorized)
+400 (Bad Request)
+201 (Created)
+200 (OK)
+501 (Not Implemented)
+403 (Forbidden)
+
+use apiResponseManager, queryBuilder, io_stream, fileUploader;
+
+private $params = [
+        '(First_Name)', 
+        '(Last_Name)', 
+        '(Gender)', 
+        '(Phone_number)', 
+        '(School_Teaching)', 
+        '(Account_Type_Code)', 
+        '(Password)', 
+        '(terms)'
+    ];
+
+$this->output(false, 400, 'Set: '.implode(',', $this->params).'', 'Bad Request', []);
+
+
+$this->output(false, 405, 'Accepted HTTP Method: POST', 'Method: ['.$_SERVER['REQUEST_METHOD'].'] Not Allowed', []);
+
+
+
+Who do you think is to really be blamed in the Novel 'The gods are not to blame'?
+
+
+
+
+
+student 24 added using standard method
+
+
+1) add student to tuitionpayment table
+2) $Student_ID should be $student_ID
+3) change $Parent_Guardian to "Good day,Your Parent Account Has Been Created"
+4) change $invoice_ID to invoce_code
+

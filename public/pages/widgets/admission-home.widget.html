@@ -1,0 +1,458 @@
+<style>
+    .admission-form-builder-control-btn {
+        position:fixed; 
+        bottom: 20%; 
+        right: 1%; 
+        z-index: 9999999; 
+        border-top: 3px solid blue;
+    }
+    .hide-upload-btn {
+    width: 0px;
+    height: 0px;
+}
+</style>
+<!-- header banner -->
+<div class="col-12 sub-nav hidden p-2 header-mobile-height" id="student-classroom-banner" style="height: 200px;">
+    <!-- teacher info -->
+    <div class="container text-center ">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12">
+                    <img src="../assets/media/img/avatar/images.jpg" alt="" style="width:120px; height:120px; border-radius: 100%; border: 4px solid white">
+                </div>
+                <div class="col-xl-10 col-lg-9 col-md-8 col-sm-12 col-12 d-flex align-items-center">
+                    <div class="col-12  teacher-home-info-text">
+                        <h4>Mr. Matthew Doe</h4>
+                        <p><i>Admission Manager</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- tab nav -->
+<div class="col-12  p-2  bg-light shadow-1">
+    <div class="container">
+        <div class="horizontal-scroll toggable-parent">
+            <!-- Bulletin -->
+            <div class="mr-3">
+                <div class="col-12 bg-white p-2 text-center text-uppercase rounded student-view-nav toggable shadow-1 toggable-tab-active" data-target="admission-bulletin-sub-view"> 
+                    <i class="fad fa-list-ol theme-txt"></i> Bulletin
+                </div>
+            </div>
+            <!-- Enrollment form setup -->
+            <div class="mr-3">
+                <div class="col-12 bg-white p-2 text-center text-uppercase rounded student-view-nav toggable shadow-1 d-none" data-target="admission-form-setup"> 
+                    <i class="fad fa-file-invoice text-warning"></i> Setup Enrollment form
+                </div>
+            </div>
+            <!-- Applicants -->
+            <div class="mr-3">
+                <div class="col-12 bg-white p-2 text-center text-uppercase rounded student-view-nav toggable shadow-1" data-target="admission-student-application"> 
+                    <i class="fad fa-door-open"></i> Potential new students
+                </div>
+            </div>
+            <!-- Students -->
+            <div class="mr-3">
+                <div class="col-12 bg-white p-2 text-center text-uppercase rounded student-view-nav toggable shadow-1" data-target="admission-registered-student-list"> 
+                    <i class="fad fa-users-class text-danger"></i> Student list
+                </div>
+            </div>
+            <!-- Promotion -->
+            <div class="mr-3">
+                <div class="col-12 bg-white p-2 text-center text-uppercase rounded student-view-nav toggable shadow-1" data-target="admission-student-promotion"> 
+                    <i class="fad fa-chart-line theme-txt"></i> Promotion
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bulletin View -->
+<div id="admission-bulletin-sub-view" class="toggable-view p-3 animated fadeIn fast">
+    <h4>Bulletin Board</h4>
+    <!--  -->
+    <div class="col-12 p-0">
+        <div class="row mt-4 d-flex justify-content-left" id="admission-bulltin-board"></div>
+    </div>
+</div>
+<!-- Enrollment form-->
+<div id="admission-form-setup" class="toggable-view p-3 animated fadeIn fast">
+        
+    <!-- Enrollment form builder -->
+    <form class="container col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 p-0 mb-5 enrollment-form-builder">
+
+        <!-- Header -->
+        <div class="card shadow-1 border-0 mb-4">
+            <div class="card-body p-3 rounded" style="border-top: 4px solid blue;">
+                <!-- Title -->
+                <input type="text" class="form-control sleak-input rounded-0 mb-3 pl-0" required disabled style="font-size: 25px;" value="Enrollment form builder">
+                <!-- description -->
+                <label class="text-muted pl-2"> Please specify the fields/indicators required for student enrollment.</label>
+                <label class="text-muted pl-2"> <b>Note:</b> <i>Your configurations become live immediately after you save</i> </label>
+            </div>
+        </div>
+
+
+        <!-- Question block -->
+        <div class="card shadow-1 border-0 mb-4">
+            <div class="card-body p-3 rounded" style="border-left: 4px solid blue;">
+
+                <!-- header -->
+                <div class="row">
+                    <!-- question -->
+                    <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8 pr-2">
+                        <input type="text" class="form-control sleak-input rounded-0 mb-3 pl-0" required style="font-size: 25px;" placeholder="Add question">
+                    </div>
+                    <!-- Answer type selector -->
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                        <div class="input-group mb-3 border  rounded">
+                            <select id="" required class="form-control bg-light2 border-0">
+                                <option value="" selected disabled>Answer type</option>
+                                <option value="Regular-text-field">Regular text field</option>
+                                <option value="Large-text-field">Large text field</option>
+                                <option value="CheckBox">CheckBox</option>
+                                <option value="Radio-Button">Radio Button</option>
+                                <option value="Dropdown-List">Dropdown List</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-12 mb-3 pl-0">
+                    <!-- new option -->
+                    <button type="button" class="btn btn-sm btn-primary shadow-2">Add Option</button>
+                </div>
+                <!--  -->
+                <div class="col-12 border pl-0">
+                    
+                    <!-- regular text -->
+                    <input type="text" class="form-control sleak-input rounded-0 mb-3"  id="" placeholder="Type your response here">
+                    <!-- large text -->
+                    <textarea class="form-control sleak-input rounded-0 mb-3" placeholder="Type your response here" id="" rows="3"></textarea>
+                    <!-- checkbox -->
+                    <label class="">
+                        <input type="checkbox" class="mb-3"  id="" placeholder="Type your response here"> <span>Option</span>
+                    </label>
+                    <!-- radio -->
+                    <label class="">
+                        <input type="radio" class="mb-3"  id="" name="" placeholder="Type your response here"> <span>Option</span>
+                    </label>
+                    <!--  -->
+                    <!--  -->
+                    <!--  -->
+                    <!--  -->
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+        <!--  -->
+        <div class="col-12 p-0 mb-5 " id="quiz_builder_section">
+            <!-- activity builder control btn -->
+            <div class="shadow-1 rounded p-2 text-center bg-white animated slideInRight admission-form-builder-control-btn">
+                <div class="col-12  p-0 ">
+                    <div class="col-12 p-0 pointer" id="activity-builder-new-question">
+                        <p class="fad fa-plus-circle fa-2x text-primary" title="Add new question"></p>
+                        <!-- <p>ADD</p> -->
+                    </div>
+                    <div class="col-12 p-0 pointer" id="activity-builder-save">
+                        <p class="fad fa-save fa-2x" title="Save and deploy"></p>
+                        <!-- <p>SAVE</p> -->
+                    </div>
+                    <div class="col-12 p-0 pointer" id="activity-builder-redo">
+                        <p class="fad fa-trash-alt fa-2x text-danger" title="Start Over"></p>
+                        <!-- <p>UNDO</p> -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="" class="hidden submit-teacher-activity-builder-form">
+    </form>
+
+
+
+
+
+</div>
+<!-- Applicants View -->
+<div id="admission-student-application" class="toggable-view p-3 animated fadeIn fast">
+    <div class="col-12 rounded shadow-1 bg-white p-3 fit-on-mobile">
+       <!-- header -->
+        <div class="col-12 mb-3">
+            <h4>Potential new students</h4>
+        </div>
+        <!-- filter section -->
+        <div class="col-12 mb-3 ">
+            <div class="row">
+                <!-- Filter -->
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 p-0">
+                    <div class="input-group mb-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="input-group mb-3 mt-3  border-0 shadow-1">
+                            <input type="search" class="form-control border-0 search-applicant" placeholder="Search">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text border-0 pointer search-applicant-btn" for="inputGroupSelect01">
+                                    <i class="fad fa-search text-primary"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- export -->
+                <div class="col-6 d-flex justify-content-end">
+                    <button class="btn btn-primary btn-sm shadow-1 hidden" id="ask-new-question">Export</button>
+                </div>
+            </div>
+        </div>
+        <!-- applicants list -->
+        <div class="col-12 ">
+            <div class="row" style="overflow: hidden;">
+                <!-- applicant table -->
+                <div class="col my-data-tbl">
+                    <!-- custom table -->
+                    <div class="custom-table" id="applicant-tbl-list">
+                        <!-- custom table header xl, lg and md only -->
+                        <div class="custom-table-lg-header-wrapper bg-light2">
+                            <div class="custom-table-lg-header-row borderless-row p-2">
+                                <div class="custom-table-lg-header-th">Photo</div>
+                                <div class="custom-table-lg-header-th">Name</div>
+                                <div class="custom-table-lg-header-th">Gender</div>
+                                <div class="custom-table-lg-header-th">Contact</div>
+                                <div class="custom-table-lg-header-th">Class</div>
+                                <div class="custom-table-lg-header-th">Action</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- applicant detail view -->
+                <div id="" class="bg-light2 animated slideInRight faster rounded applicant-detail-box applicant-detail-box-hide">
+                    <!--  -->
+                    <span id="applicant-detail-form-fields"></span>
+                    <!-- controls -->
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <button class="btn btn-danger col-12 shadow-1" id="decline-applicant">Decline</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary col-12 shadow-1" id="accept-applicant">Accept</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Students View -->
+<div id="admission-registered-student-list" class="toggable-view p-3 animated fadeIn fast">
+    <div class="col-12 rounded shadow-1 bg-white p-3 fit-on-mobile">
+        <!-- show list of all registered students. their profiles can be edited from here. (name, parents, suspension, e.t.c) -->
+        <!-- header -->
+        <div class="col-12 mb-3">
+            <h4>Students List</h4>
+        </div>
+        <!-- filter section -->
+        <div class="col-12 mb-3 ">
+            <div class="row">
+                <!-- Filter -->
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 p-0">
+                    <div class="input-group mb-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="input-group mb-3 mt-3  border-0 shadow-1">
+                            <input type="search" class="form-control border-0 search-student" placeholder="Search">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text border-0 pointer search-student-btn" for="inputGroupSelect01">
+                                    <i class="fad fa-search text-primary"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Students list -->
+        <div class="col-12 ">
+            <div class="row" style="overflow: hidden;">
+                <!-- applicant table -->
+                <div class="col my-data-tbl">
+                    <!-- custom table -->
+                    <div class="custom-table" id="student-tbl-list">
+                        <!-- custom table header xl, lg and md only -->
+                        <div class="custom-table-lg-header-wrapper bg-light2">
+                            <div class="custom-table-lg-header-row borderless-row p-2">
+                                <div class="custom-table-lg-header-th">Photo</div>
+                                <div class="custom-table-lg-header-th">id</div>
+                                <div class="custom-table-lg-header-th">Name</div>
+                                <div class="custom-table-lg-header-th">Action</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Promotion View -->
+<div id="admission-student-promotion" class="toggable-view p-3 animated fadeIn fast">
+    <div class="col-12 rounded shadow-1- bg-white- p-3 fit-on-mobile">
+        <!-- classes cards list -->
+        <div class="row animated fadeIn fast" id="classes-cards-list">
+            <!-- classes card #1 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb-4 animated fadeIn">
+                <!--  -->
+                <div class="card border-0  shadow-1 rounded animated fadeIn slow" data-target-subject="">
+                    <div class="card-body p-0 admission-class-card"  style="border-top: 7px solid red;">
+                        <!-- header -->
+                        <div class="col-12 p-0 rounded admission-class-card-header bg-light2 mb-3"> 
+                            <div class="rounded">
+                                <div class="col-12 p-2 text-center text-capitalize">
+                                    <h4>masonary Class</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="container mt-3 d-flex justify-content-center p-3">
+                            <button class="btn btn-sm btn-primary pointer text-uppercase shadow-2 pl-3 pr-3 go-to-student-list" style="border-radius: 25px;">View Students</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- classes card #2 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb-4 animated fadeIn">
+                <!--  -->
+                <div class="card border-0  shadow-1 rounded animated fadeIn slow" data-target-subject="">
+                    <div class="card-body p-0 admission-class-card"  style="border-top: 7px solid red;">
+                        <!-- header -->
+                        <div class="col-12 p-0 rounded admission-class-card-header bg-light2 mb-3"> 
+                            <div class="rounded">
+                                <div class="col-12 p-2 text-center text-capitalize">
+                                    <h4>Plumbing Class</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="container mt-3 d-flex justify-content-center p-3">
+                            <button class="btn btn-sm btn-primary pointer text-uppercase shadow-2 pl-3 pr-3 go-to-student-list" style="border-radius: 25px;">View Students</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- student class list for promotion -->
+        <div class="col p-0 my-data-tbl hidden animated fadeIn fast" id="student-class-list">
+            <!-- back button -->
+            <div class="col-12 p-0 mb-3">
+                <span class=" rounded-0 text-uppercase pointer" id="exit-student-class-list">
+                    <i class="fal fa-arrow-left " id="exit-payment-form-view"></i> Back
+                </span>
+            </div>
+            <!-- custom table -->
+            <div class="custom-table bg-white shadow-1">
+                <!-- custom table header xl, lg and md only -->
+                <div class="custom-table-lg-header-wrapper bg-light2">
+                    <div class="custom-table-lg-header-row borderless-row p-2">
+                        <div class="custom-table-lg-header-th">Photo</div>
+                        <div class="custom-table-lg-header-th">Id</div>
+                        <div class="custom-table-lg-header-th">Fullname</div>
+                        <div class="custom-table-lg-header-th">Action</div>
+                    </div>
+                </div>
+                <!-- custom table row -->
+                <div class="custom-table-data-section shadow-1-md">
+                    <div class="custom-table-data-section-row borderless-row">
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data">
+                            <img src="../assets/media/img/avatar/images.jpg" class="img-thumbnail img-thumbnail-height1" alt="">
+                        </div>
+
+                        <!-- header sm and mini only -->
+                        <div class="custom-table-data-section-sm-header">Id</div>
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data">123</div>
+
+                        <!-- header sm and mini only -->
+                        <div class="custom-table-data-section-sm-header">Fullname</div>
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data">James Monroe</div>
+
+                        <!-- header sm and mini only -->
+                        <div class="custom-table-data-section-sm-header">Action</div>
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data align-items-start">
+                            <button class="btn btn-primary btn-sm shadow-1 show-student-details-for-promotion" atlas-id="1" style="border-radius: 25px;"> View Progress Report <i class="fad fa-long-arrow-alt-right"></i></button>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                <!-- custom table row -->
+                <div class="custom-table-data-section shadow-1-md">
+                    <div class="custom-table-data-section-row borderless-row">
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data">
+                            <img src="../assets/media/img/avatar/images.jpg" class="img-thumbnail img-thumbnail-height1" alt="">
+                        </div>
+
+                        <!-- header sm and mini only -->
+                        <div class="custom-table-data-section-sm-header">Id</div>
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data">123</div>
+
+                        <!-- header sm and mini only -->
+                        <div class="custom-table-data-section-sm-header">Fullname</div>
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data">James Monroe</div>
+
+                        <!-- header sm and mini only -->
+                        <div class="custom-table-data-section-sm-header">Action</div>
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data align-items-start">
+                            <button class="btn btn-primary btn-sm shadow-1 show-student-details-for-promotion" atlas-id="1" style="border-radius: 25px;"> View Progress Report <i class="fad fa-long-arrow-alt-right"></i></button>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                <!-- custom table row -->
+                <div class="custom-table-data-section shadow-1-md">
+                    <div class="custom-table-data-section-row borderless-row">
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data">
+                            <img src="../assets/media/img/avatar/images.jpg" class="img-thumbnail img-thumbnail-height1" alt="">
+                        </div>
+
+                        <!-- header sm and mini only -->
+                        <div class="custom-table-data-section-sm-header">Id</div>
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data">123</div>
+
+                        <!-- header sm and mini only -->
+                        <div class="custom-table-data-section-sm-header">Fullname</div>
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data">James Monroe</div>
+
+                        <!-- header sm and mini only -->
+                        <div class="custom-table-data-section-sm-header">Action</div>
+                        <!-- body -->
+                        <div class="custom-table-data-section-sm-data align-items-start">
+                            <button class="btn btn-primary btn-sm shadow-1 show-student-details-for-promotion" atlas-id="1" style="border-radius: 25px;"> View Progress Report <i class="fad fa-long-arrow-alt-right"></i></button>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

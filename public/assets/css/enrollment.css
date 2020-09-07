@@ -1,0 +1,51 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+.pointer {
+    cursor: pointer;
+}
+.hide-upload-btn {
+    width: 0px;
+    height: 0px;
+}
+.enrollment-wrapper {
+    position: fixed; 
+    height: 100%;
+}
+.enrollment-wallpaper {
+    height: 100vh;
+    position: relative;
+    background-image: url('../media/img/settings/home7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.enrollment-wallpaper > div {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+}
+.enrollment-form-wrapper {
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+/* .enrollment-form-wrapper > form {
+    
+} */
+label {
+    font-weight: bold !important;
+}
+/* .sleak-input {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: solid 1px;
+    border-color: grey;
+}
+.sleak-input:focus{
+    box-shadow: none !important;
+    outline: none !important;
+} */

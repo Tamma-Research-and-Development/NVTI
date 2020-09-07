@@ -1,0 +1,247 @@
+<!-- header banner -->
+<div class="col-12 sub-nav hidden" id="student-classroom-banner" style="height: 100px;">
+    <div class="container text-center ">
+        <i class="fad fa-2x fa-cogs animated bounceInDown"></i>
+        <h4 class="animated bounceInUp header-text"> SETTINGS</h4>
+    </div>
+  </div>
+<!-- tab nav -->
+<div class="col-12  p-2  bg-light  shadow-1">
+    <div class="container text-center">
+        <div class="horizontal-scroll toggable-parent">
+            <div class="mr-3">
+                <div class="col-12 bg-white p-2 text-black text-center text-uppercase rounded student-view-nav toggable shadow-1 toggable-tab-active" data-target="personal-settings-view"> 
+                    <i class="fad fa-palette theme-txt"></i> Personalize
+                </div>
+            </div>
+            <div class="mr-3">
+                <div class="col-12 bg-white p-2 text-center text-uppercase rounded student-view-nav toggable shadow-1" data-target="notification-view"> 
+                    <i class="fad fa-bell text-primary"></i> Notification
+                </div>
+            </div>
+            <div class="mr-3">
+                <div class="col-12 bg-white p-2 text-center text-uppercase rounded student-view-nav toggable shadow-1" data-target="log-view"> 
+                    <i class="fad fa-clipboard-list text-success"></i> System Log
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<!-- Notification -->
+<div class="col-12 animated fadeIn slow d-none col-12 toggable-view" id="notification-view">
+    <div class="row mt-4  ">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 shadow m-3 mb-5 bg-white rounded ">
+                <div class="row">
+                    <div class="col-12 rounded ">
+                        <div class="row sub-nav p-3 ">
+                            <div class="col-10 d-flex align-items-center">
+                                <h5 class="text-white text-uppercase">Notifications</h5>
+                            </div>
+                            <div class="col-2 d-flex align-items-center">
+                                <h5 class="fad fa-bell fa-2x text-white"></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-1">
+                        <h6 class=""><b>Please choose how you want your users to be notified on this platform. </b></h6>
+                    </div>
+                    <div class="col-12  p-4">
+                        <form id="">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="notification"  id="notification-email">
+                                <label class="form-check-label font-weight-bold" for="notification-email">Email (Free)</label><br>
+                                <i>No additional charges. all users (students and staff must all have an email address)</i>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="notification" id="notification-sms">
+                                <label class="form-check-label font-weight-bold" for="notification-sms">SMS (Paid)</label><br>
+                                <i>This will come with a minimum charges</i>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="notification" id="notification-Hybrid">
+                                <label class="form-check-label font-weight-bold" for="notification-Hybrid">Hybrid (Recommended)</label><br>
+                                <i>This will come with a minimum charges</i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Personalize -->
+<div class="col-12 animated  fadeIn slow toggable-view" id="personal-settings-view">
+    <div class="container col-12 bg-white shadow-1 rounded mt-3 pb-3">
+        <div class="row">
+            <!-- Graphics bar -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3 grahics-content-shadow1 " style="z-index: 9;">
+                <div class="col mt-3 p-0">
+                    <h5 class="text-capitalize  mb-4 p-0">Graphics</h5>
+                </div>
+                <div class="row d-flex justify-content-left mt-2">
+                    <!--  -->
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4 ">
+                        <div class="card rounded shadow-1 border-0">
+                            <div class="card-body p-0 settings-graphics-card rounded" style="background-image: url('../assets/media/img/settings/home7.jpg');"></div>
+                            <div class="card-footer text-dark bg-light">
+                                <div class="row graphic-text-height" style="height: 70px;">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 p-0">
+                                        <div class="col">
+                                            <h5>Homepage Background</h5>
+                                        </div>
+                                        <div class="col">
+                                            <p><i>picture.jpg</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 p-0 ">
+                                        <div class="col d-flex justify-content-center ">
+                                            <i class="fad fa-plus fa-2x pointer"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4 ">
+                        <div class="card shadow-1 border-0">
+                            <div class="card-body p-0 settings-graphics-card rounded" style="background-image: url('../assets/media/img/educator.jpg');"></div>
+                            <div class="card-footer text-dark bg-light">
+                                <div class="row " style="height: 70px;">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 p-0">
+                                        <div class="col">
+                                            <h5>Staff Login Background</h5>
+                                        </div>
+                                        <div class="col">
+                                            <p><i>picture.jpg</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 p-0">
+                                        <div class="col d-flex justify-content-center">
+                                            <i class="fad fa-plus fa-2x pointer"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4 ">
+                        <div class="card shadow-1 border-0">
+                            <div class="card-body p-0 settings-graphics-card rounded" style="background-image: url('../assets/media/img/student.jpg');"></div>
+                            <div class="card-footer  text-dark bg-light">
+                                <div class="row" style="height: 70px;">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 p-0">
+                                        <div class="col">
+                                            <h5>Student Login Background</h5>
+                                        </div>
+                                        <div class="col">
+                                            <p><i>picture.jpg</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 p-0">
+                                        <div class="col d-flex justify-content-center">
+                                            <i class="fad fa-plus fa-2x pointer"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                        <div class="card shadow-1 border-0">
+                            <div class="card-body p-0 settings-graphics-card rounded" style="background-image: url('../assets/media/img/settings/2logo.png');  background-position: center; background-repeat: no-repeat; background-size:contain;"></div>
+                            <div class="card-footer  text-dark bg-light">
+                                <div class="row" style="height: 70px;">
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 p-0">
+                                        <div class="col">
+                                            <h5>School Logo</h5>
+                                        </div>
+                                        <div class="col ">
+                                            <p class=""><i>picture.jpg</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 p-0">
+                                        <div class="col d-flex justify-content-center">
+                                            <i class="fad fa-plus fa-2x pointer"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- textual content -->
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 pt-5 pl-0 pr-2">
+                <div class="container  d-flex justify-content-center  bg-white fit-on-mobile" style="height: 100%;">
+                    <div class="col-12 p-5 fit-on-mobile-3  ">
+                        <!-- basic information -->
+                        <div class="row mb-5">
+                            <div class="col-12 mt-2 ">
+                                <h5 class="text-capitalize ">basic information</h5><br>
+                            </div>
+                            <!--  -->
+                            <div class="col-12 mb-5 ">
+                                <div class="">
+                                    <input type="text" class="form-control btn-sm rounded-0 sleak-input text-capitalize pl-0" placeholder="School Name">
+                                </div>
+                            </div>  
+                            <!--  -->
+                            <div class="col-12 mb-5">
+                                <div class="">
+                                    <input type="text" class="form-control btn-sm rounded-0 sleak-input text-capitalize pl-0" placeholder="School Address">
+                                </div>
+                            </div>  
+                            <!--  -->
+                            <div class="col-12">
+                                <div class="">
+                                    <input type="text" class="form-control btn-sm rounded-0 sleak-input text-capitalize pl-0" placeholder="School Phone No.">
+                                </div>
+                            </div>  
+                        </div>
+                        <!-- detailed information -->
+                        <div class="row ">
+                            <h5 class="text-capitalize pl-3 mb-4 p-0">detailed information</h5>
+                            <!--  -->
+                            <div class="col-12 p-0  mb-5">
+                                <div class="col-12  ">
+                                    <textarea rows="1" class="form-control rounded-0 sleak-input text-capitalize pl-0" placeholder="school motto"></textarea>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="col-12 p-0  mb-5">
+                                <div class="col-12  ">
+                                    <textarea rows="1" class="form-control rounded-0 sleak-input text-capitalize pl-0" placeholder="school mission"></textarea>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="col-12 p-0  mb-5">
+                                <div class="col-12  ">
+                                    <textarea rows="1" class="form-control rounded-0 sleak-input text-capitalize pl-0" placeholder="school vision"></textarea>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="col-12 p-0  mb-5">
+                                <div class="col-12  ">
+                                    <textarea rows="1" class="form-control rounded-0 sleak-input text-capitalize pl-0" placeholder="school history"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 p-0 text-right mb-2">
+                                <div class="col-12 ">
+                                    <button type="submit" class="btn btn-primary shadow" style="border-radius: 25px;">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>

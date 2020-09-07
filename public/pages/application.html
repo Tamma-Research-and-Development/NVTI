@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" href="../assets/media/img/" type="image/x-icon"> -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/css/css/all.css">
+    <link rel="stylesheet" href="../assets/css/enrollment.css">
+    <title>HOPE CHINA | STUDENT ENROLLMENT</title>
+</head>
+<body class="">
+    <!-- wrapper -->
+    <div class="col bg-dark enrollment-wrapper">
+        <div class="row">
+            <!-- background-image -->
+            <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12 col-12 d-xl-block d-lg-block d-md-block d-sm-none d-none enrollment-wallpaper">
+                <div></div>
+            </div>
+            <!-- enrollment form -->
+            <div class="col-xl-8 col-lg-8 col-md-9 col-sm-12 col-12 p-5 bg-white enrollment-form-wrapper">
+                <form id="enrollment-form" autocomplete="off" enctype="multipart/form-data">
+                    <!-- header -->
+                    <div class="col p-0 text-center">
+                        <h6 class="p-0 text-uppercase">enrollment form</h6>
+                    </div>
+                    <div class="row p-3 mt-4">
+                        <!-- photo -->
+                        <div class="container mb-3 d-flex justify-content-center">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-flex justify-content-center">
+                                <label class="pointer">
+                                    <div class="p-0  bg-light- d-flex justify-content-center align-items-center" id="photo-bg" style="width:150px; height: 150px; background-image: url('../assets/media/img/avatar/user.png'); background-size: cover;">
+                                        <input type="file" required id="photo" name="photo" class="hide-upload-btn">
+                                    </div>
+                                    <label class="col">Choose Image</label>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- textual info -->
+                        <!-- First name -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5 pl-0">
+                            <label>First name: </label>
+                            <input type="text" id="applicant_first_name" required class="form-control sleak-input rounded-0">
+                            <i class='text-danger'> * Required</i>
+                        </div>
+                        <!-- Middle name -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5 pl-0">
+                            <label>Middle name: </label>
+                            <input type="text" id="applicant_middle_name" required class="form-control sleak-input rounded-0">
+                            <i class='text-danger'> * Required</i>
+                        </div>
+                        <!-- Last name -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5 pl-0">
+                            <label>Last name: </label>
+                            <input type="text" id="applicant_last_name" required class="form-control sleak-input rounded-0">
+                            <i class='text-danger'> * Required</i>
+                        </div>
+                        <!-- Date of Birth -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5 pl-0">
+                            <label for="month"> Date of Birth:  </label>
+                            <input type="date" required id="applicant_DOB" class="form-control sleak-input rounded-0">
+                            <i class='text-danger'> * Required</i>
+                        </div>
+                        <!-- Place of Birth  -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5 pl-0">
+                            <label>Place of Birth: </label>
+                            <input type="text" id="applicant_Place_of_Birth" required class="form-control sleak-input rounded-0">
+                            <i class='text-danger'> * Required</i>
+                        </div>
+                        <!-- Nationality -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5 pl-0">
+                            <label>Nationality: </label>
+                            <input type="text" id="applicant_Nationalities" required class="form-control sleak-input rounded-0">
+                            <i class='text-danger'> * Required</i>
+                        </div>
+                        <!-- Gender -->
+                        <div class="col-12 mb-5 p-0">
+                            <div class="col p-0">
+                                <div class="row">
+                                    <div class="col-4 ">
+                                        <label>Gender: </label>
+                                    </div>
+                                    <div class="col-8 p-0">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-check">
+                                                    <label>
+                                                        <input class="form-check-input gender" type="radio" name="applicant_gender" value="male">
+                                                        Male
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 p-0">
+                                                <div class="form-check">
+                                                    <label>
+                                                        <input class="form-check-input gender" type="radio" name="applicant_gender" value="Female">
+                                                        Female
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class='text-danger'> * Required</i>
+                        </div>
+                        <!-- Address -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5 pl-0">
+                            <label>Address: </label>
+                            <input type="text" id="applicant_Address" required class="form-control sleak-input rounded-0">
+                            <i class='text-danger'> * Required</i>
+                        </div>
+                        <!-- Phone -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5 pl-0">
+                            <label>Phone: </label>
+                            <input type="text" id="applicant_phone" required class="form-control sleak-input rounded-0">
+                            <i class='text-danger'>  * Required</i>
+                        </div>
+                        <!-- Email -->
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5 pl-0">
+                            <label>Email: </label>
+                            <input type="email" id="applicant_email" class="form-control sleak-input rounded-0">
+                            <i class='text-info'> * Optional</i>
+                        </div>
+                        <!-- Tuition Status -->
+                        <div class="col-12 mb-5 p-0 skip-container">
+                            <div class="col p-0">
+                                <div class="row">
+                                    <div class="col-6 ">
+                                        <label> Tuition Status </label>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-check">
+                                                    <label>
+                                                        <input class="form-check-input self-supported skip" type="radio" name="applicant_tuition_status" data-skip="scholarship" value="yes">
+                                                        Scholarship
+                                                    </label>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-6 p-0">
+                                                <div class="form-check">
+                                                    <label>
+                                                        <input class="form-check-input self-supported skip" type="radio" name="applicant_tuition_status" data-skip="none" value="no">
+                                                        Self-Cash Payment
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skip-section"></div>
+                            <i class='text-danger'> * Required</i>
+                        </div>
+                        <!-- Academic Status Checkbox -->
+                        <div class="col-12 mb-5">
+                            <div class="row p-2">
+                                <div class="col-12 pl-0">
+                                    <label>ACADEMY STATUS <span class="text-danger">(Please Check Category below)</span> </label>
+                                </div>
+                                <!-- College Graduate -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3 col-12">
+                                    <label>
+                                        <input type="radio" value="College Graduate" name="academic_status" required class="form-check-input" value="College Graduate">
+                                        College Graduate
+                                    </label>
+                                </div>
+                                <!-- College Student -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3 col-12">
+                                    <label>
+                                        <input type="radio" value="College Student" name="academic_status" class="form-check-input" value="College Student">
+                                        College Student
+                                    </label>
+                                </div>
+                                <!-- High School Graduate -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3 col-12">
+                                    <label >
+                                        <input type="radio" value="High School Graduate" name="academic_status" class="form-check-input" value="High School Graduate">
+                                        High School Graduate
+                                    </label>
+                                </div>
+                                <!-- High School Student -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3 col-12">
+                                    <label>
+                                        <input type="radio" value="High School Student" name="academic_status" class="form-check-input" value="High School Student">
+                                        High School Student
+                                    </label>
+                                </div>
+                                <!-- Below High School -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3 col-12">
+                                    <label>
+                                        <input type="radio" value="Below High School" name="academic_status" class="form-check-input" value="Below High School">
+                                        Below High School
+                                    </label>
+                                </div>
+                                <!-- None -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-3 col-12">
+                                    <label>
+                                        <input type="radio" value="None" name="academic_status" class="form-check-input" value="None">
+                                        None
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Emergency Contact (not Completed) -->
+                        <div class="col-12 mb-5 pl-0">
+                            <div class="row">
+                                <div class="col-12 mb-3 text-uppercase">
+                                    <label>Contact person in case of emergency</label>
+                                </div>
+                                <!-- First name -->
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mb-5">
+                                    <label>First name: </label>
+                                    <input type="text" id="Emergency_Contact_first_name" required class="form-control sleak-input rounded-0">
+                                    <i class='text-danger'> * Required</i>
+                                </div>
+                                <!-- Last name -->
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mb-5">
+                                    <label>Last name: </label>
+                                    <input type="text" id="Emergency_Contact_last_name" required class="form-control sleak-input rounded-0">
+                                    <i class='text-danger'> * Required</i>
+                                </div>
+                                <!-- Gender -->
+                                <div class="col-12 mb-5">
+                                    <div class="col p-0">
+                                        <div class="row">
+                                            <div class="col-4 ">
+                                                <label>Gender: </label>
+                                            </div>
+                                            <div class="col-8 p-0">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-check">
+                                                            <label>
+                                                                <input class="form-check-input gender" type="radio" name="Emergency_Contact_gender" value="male">
+                                                                Male
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 p-0">
+                                                        <div class="form-check">
+                                                            <label>
+                                                                <input class="form-check-input gender" type="radio" name="Emergency_Contact_gender" value="Female">
+                                                                Female
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <i class='text-danger'> * Required</i>
+                                </div>
+                                <!-- Address -->
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mb-5">
+                                    <label>Address: </label>
+                                    <input type="text" id="Emergency_Contact_Address" required class="form-control sleak-input rounded-0">
+                                    <i class='text-danger'> * Required</i>
+                                </div>
+                                <!-- Phone -->
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mb-5">
+                                    <label>Phone: </label>
+                                    <input type="text" id="Emergency_Contact_Phone" required class="form-control sleak-input rounded-0">
+                                    <i class='text-danger'> * Required</i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- First time in a Vocational Training School -->
+                        <div class="col-12 mb-5 p-0 skip-container">
+                            <div class="col p-0">
+                                <div class="row">
+                                    <div class="col-6 ">
+                                        <label>Have you Attended a Vocational Training School before? </label>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-check">
+                                                    <label>
+                                                        <input class="form-check-input self-supported skip" type="radio" name="previousVocationSchool" data-skip="previousVocationSchool" value="yes">
+                                                        Yes
+                                                    </label>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-6 p-0">
+                                                <div class="form-check">
+                                                    <label>
+                                                        <input class="form-check-input self-supported skip" type="radio" name="previousVocationSchool" data-skip="none" value="no" >
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skip-section"></div>
+                            <i class='text-danger'> * Required</i>
+                        </div>
+                        <!-- Courses selection Checkbox -->
+                        <div class="col-12 mb-5">
+                            <div class="row p-2">
+                                <div class="col-12 pl-0">
+                                    <label>Please Check Category of training desired: </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label>
+                                        <input type="checkbox" value="Auto CAD" name="Courses_selection_Auto_CAD" id="Auto_CAD" class="form-check-input">
+                                        Auto CAD
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label>
+                                        <input type="checkbox" value="Architectural Drafting" name="Courses_selection_Architectural_Drafting" id="" class="form-check-input">
+                                        Architectural Drafting
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Auto Mechanic" name="Courses_selection_Auto_Mechanic" id="" class="form-check-input">
+                                        Auto Mechanic
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Building Construction" name="Courses_selection_Building_Construction" id="" class="form-check-input">
+                                        Building Construction
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Blue Print Reading" name="Courses_selection_Blue_Print_Reading" id="" class="form-check-input">
+                                        Blue Print Reading
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Beauty Therapy" name="Courses_selection_Beauty_Therapy" id="" class="form-check-input">
+                                        Beauty Therapy
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Carpentry" name="Courses_selection_Carpentry" id="" class="form-check-input">
+                                        Carpentry
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Computer Software" name="Courses_selection_Computer_Software" id="" class="form-check-input">
+                                        Computer Software
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Computer Hardware" name="Courses_selection_Computer_Hardware" id="" class="form-check-input">
+                                        Computer Hardware
+                                    </label>
+                                </div>
+
+                                <!-- My Start -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Computer Software Professional " name="Courses_selection_Computer_Software_Professional  " id="" class="form-check-input">
+                                        Computer Software Professional 
+                                    </label>
+                                </div>
+
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Catering" name="Courses_selection_Catering" id="" class="form-check-input">
+                                        Catering
+                                    </label>
+                                </div>
+
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Electricity" name="Courses_selection_Electricity" id="" class="form-check-input">
+                                        Electricity
+                                    </label>
+                                </div>
+
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Event Management" name="Courses_selection_Event_Management" id="" class="form-check-input">
+                                        Event Management
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Electronic" name="Courses_selection_Electronic" id="" class="form-check-input">
+                                        Electronic
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Estimating" name="Courses_selection_Estimating" id="" class="form-check-input">
+                                        Estimating
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Fashion Design" name="Courses_selection_Fashion_Design" id="" class="form-check-input">
+                                        Fashion Design
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Hotel Management" name="Courses_selection_Hotel_Management" id="" class="form-check-input">
+                                        Hotel Management
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Interior Decoration" name="Courses_selection_Interior_Decoration" id="" class="form-check-input">
+                                        Interior Decoration
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Tailoring" name="Courses_selection_Tailoring" id="" class="form-check-input">
+                                        Tailoring
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Pastry" name="Courses_selection_Pastry" id="" class="form-check-input">
+                                        Pastry
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Plumbling" name="Courses_selection_Plumbling" id="" class="form-check-input">
+                                        Plumbling
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3">
+                                    <label >
+                                        <input type="checkbox" value="Project Managament" name="Courses_selection_Project_Managament" id="" class="form-check-input">
+                                        Project Managament
+                                    </label>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!-- Terms and conditions -->
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-5 pl-0">
+                            <label>Terms and conditions: </label>
+                            <div class="col pl-0">
+                                <label style="font-style:normal !important; font-weight:lighter !important;">
+                                    <input type="checkbox" name="Terms_and_conditions" required value="yes" class="rounded-0"> 
+                                    <i>I <b id="student-name-for-terms">Yakpawolo</b> have read; understand, and accept to form part of <b>NVTI</b> as a student, on this day <b id="date-for-terms">00/00/00</b> and vow that all information provided above is true. Any contradiction that may cause problem to the institution will give the administration of NVTI all right to take the requisit action against me. </i>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- controls -->
+                        <div class="col-12 mb-5 p-0">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="reset" onclick="window.location.reload();" class="btn btn-outline-danger shadow-1 text-uppercase form-control" style="border-radius: 25px !important;"> Cancel</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="submit"  class="btn btn-primary shadow text-uppercase form-control" id="apply-today" style="border-radius: 25px !important;"> Apply today!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script type="module" src="../assets/js/enrollment/controller.js"></script>
+</body>
+
+<!-- Class -->
+<!-- <div class="col-12 mb-5 p-0">
+    <label>Class: </label>
+    <select required id="class" class="form-control form-control-lg sleak-input rounded-0">
+        <option value="" selected disabled></option>
+        <option value="">Grade One</option>
+        <option value="">Grade Two</option>
+    </select>
+    <i class='text-danger'> * Required</i>
+</div> -->
+
+
+</html>

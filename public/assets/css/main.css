@@ -1,0 +1,492 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto&display=swap'); */
+
+@import url('components.css');
+@import url('color-theme.css');
+@import url('custom-table.css');
+
+/* * {
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+} */
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.bg-light2 {
+    background-color: #f5f5f5 !important;
+}
+input[type='range']::-webkit-slider-runnable-track {
+    color: #13bba4;
+}
+input[type='range']::-webkit-slider-thumb {
+    background: red !important;
+}
+
+
+.horizontal-scroll::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: none;
+}
+::-webkit-scrollbar {
+    width: 4px;
+    height: 3px;
+}
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 10px;
+}
+#note-reading-viewer::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+#note-reading-viewer::-webkit-scrollbar-track {
+    background-color: lightgray;
+}
+#note-reading-viewer::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+input:focus, button:focus, textarea:focus {
+    box-shadow: none !important;
+}
+
+.toggable {
+    cursor: pointer;
+}
+.toggable-tab-active {
+    border-bottom:3px solid blue !important;
+}
+
+td {
+    min-width: 250px;
+}
+.pointer {
+    cursor: pointer;
+}
+.pointer-not-allowed {
+    cursor: not-allowed;
+}
+.theme {
+    background: #3F729B;
+}
+.theme-txt {
+    color: #3F729B;
+}
+
+
+
+
+
+
+.img-settings{
+    height: 150px;
+}
+.change-password-field{
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: solid black 1px;
+}
+.change-password-field:focus{
+    box-shadow: none!important;
+    outline: black!important;
+}
+.settings-card{
+    cursor: pointer!important;
+}
+.dashboard-chat-div{
+    height: 400px;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 10px rgba(0,0,0,0.6); */
+}
+.read-more{
+    cursor: pointer!important;
+}
+.info-modal-staff-card{
+    height: 200px;
+    width: auto;
+    background-image: url(../media/img/home5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.info-modal-staff-card{
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+.info-modal-img{
+    display:block;
+    margin:auto; 
+    width:90px;
+    height:90px;
+}
+
+.hidden {
+    display: none;
+}
+.app-bg {
+    background-color: #e8eaf6 !important;
+    /* background-color: rgb(195,195,195); */
+}
+.btn-color {
+    background-color: #0099CC !important;
+    color: white !important;
+}
+.btn-color:hover {
+    color: white !important;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+    padding: 0;
+    z-index: .9999;
+}
+.home-banner-image {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 2%;
+}
+.homeImage{
+    width: 100%;
+    height: 80%;
+    background-color: gold;
+    /* background-image: url(../media/img/home7.jpg); */
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+/* .homeImage{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../media/img/home7.jpg);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+} */
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background:rgba(0, 0, 0, 0.5);
+    color: white;
+    overflow: auto;
+    display: flex;
+    justify-content: center;   
+}
+.overylay::-webkit-scrollbar {
+    display: none;
+}
+.brandName{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: small;
+    display: inline;
+    padding-left: 3px;
+}
+
+.footerStyle{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* height: 1px; */
+    width: 100%;
+    color: rgba(0, 0, 0, 0.8);
+} 
+.iconStyle{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.border-style{
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+
+.login-form-wrapper{
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+    border: 0;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+.login-form-wrapper::-webkit-scrollbar{
+    display: none;
+}
+.login-form-banner{
+    width: 100%;
+    height: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.login-form-banner-overlay{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background:rgba(0, 0, 0, 0.8);
+    color: white;
+    overflow: auto;
+}
+.sleak-input {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom:  1px solid lavender;
+    background-color: white !important;
+}
+.sleak-input:focus{
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 
+.workspace-mobile-header {
+    dis
+} */
+
+
+
+.sidebar{
+    height: 100%;
+    width: 60px;
+    display: block;
+    background-color:#1C2331;
+    /* background-color:#212121; */
+    color: #818181;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* z-index: 1; */
+    overflow: hidden;
+    
+}
+
+.show-sidebar{
+    display: block;
+}
+
+ /* The sidebar links */
+.sidebar-nav-btn, .regular-account-pwdRest-btn {
+    cursor: pointer;   
+    padding: 1%;
+    transition: ease-in 300ms;
+}
+.sidebar-nav-btn-active {
+    color: blue;
+    font-weight: bold;
+    /* box-shadow: inset 0 0 10px #000000;    */
+}
+.sidebar  h6 {
+    text-decoration: none;
+    font-size: 9px;
+    /* color: #818181; */
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+ .side-bar-logo{
+    width:50px;
+    height:50px;
+ }
+.workspace-main-content {
+    margin-left: 60px;
+}
+.modalIconStyle {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+.modalIconStyle > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 5px solid crimson;
+}
+.bulletin-card-msg-body {
+    height: 80px;
+    overflow: hidden;
+}
+
+.inside-modal-icon{
+    background-image: url("../media/img/home6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+/* causing problem on homepage */
+/* .iconStyle{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+} */
+
+/* list style for staff manager page  */
+.list-style{
+    flex: 1;
+    display: flex;
+}
+.left{
+    height: 100px;
+    width: 100px;
+}
+.right{
+    flex: 1;
+}
+
+
+
+
+
+/* mobile devices */
+@media screen and (max-width:900px) {
+    .app-bg {
+        background-color:white;
+    }
+    .login-form-wrapper {
+        box-shadow: none !important;
+        border-radius: 0%;
+    }
+    .wrapper{
+        width: 100%;
+        height: auto;
+        position: relative;
+        bottom: 0;
+        padding: 0;
+        z-index: .9999;
+    }
+    
+    .homeImage{
+        width: 100%;
+        height: 500px;
+        background-color: gold;
+        /* background-image: url(../media/img/home7.jpg); */
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        overflow-x: hidden;
+    }
+    .login-form-banner{
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .footerStyle{
+        position: relative ;
+        bottom: none;
+        left: none;
+        /* height: 220px; */
+        width: 100%;
+        color: rgba(0, 0, 0, 0.8);
+    } 
+    
+
+
+    .workspace-main-content {
+        margin-left: 0px;
+    }
+    .sidebar{
+        height: 54px;
+        width: 100%;
+        position: fixed;
+        background: white;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        transition: 300ms;
+        z-index: 9;
+        box-shadow: 0 0 30px #CCC;
+    }
+    .sidebar-nav-btn, .regular-account-pwdRest-btn {
+        width: 16.66%;
+        float: left;
+        padding-top: 2%;
+        padding-bottom: auto !important;
+        color: black !important;
+    }
+    .staff-nav-btn {
+        width: 20% !important;
+        float: left;
+        padding-top: 2%;
+        padding-bottom: auto !important;
+        color: black !important;
+    }
+    .nav-btn-sm {
+        width: 33.33% !important;
+        float: left;
+        padding-top: 2%;
+        padding-bottom: auto !important;
+        color: black !important;
+    }
+    .nav-btn-md {
+        width: 24.999% !important;
+        float: left;
+        padding-top: 2%;
+        padding-bottom: auto !important;
+        color: black !important;
+    }
+    .student-nav-btn {
+        width: 25% !important;
+        float: left;
+        padding-top: 2%;
+        padding-bottom: auto !important;
+        color: black !important;
+    }
+    .admin-nav-btn {
+        width: 19.99% !important;
+        float: left;
+        padding-top: 2%;
+        padding-bottom: auto !important;
+        color: black !important;
+    }
+    .sidebar-icon {
+        font-size: 25px !important;
+        color: black !important;
+        /* color: black !important; */
+    }
+    .sidebar  h6 {
+        text-decoration: none;
+        font-size: 7px;
+        color: black;
+        display: block;
+    }
+
+    .settings-card-desc {
+        font-size: 9px;
+    }
+
+}
+
+
